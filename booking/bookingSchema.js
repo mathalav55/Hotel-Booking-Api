@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-
+    
 var bookingSchema = mongoose.Schema({
     name : {
         first : {
