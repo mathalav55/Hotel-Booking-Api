@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "",
-    "dev" : "nodemon index.js"
+    "dev" : "nodemon server.js"
   },
   "keywords": [
     "hotel",
