@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var userName = '';
 var password = '';
 mongoose.connect(
-    "mongodb+srv://"+process.env.MONGO_USER_NAME+":"+process.env.MONGO_PASSWORD+"@little-creek.kemju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongodb+srv://admin:"+process.env.MONGO_PASSWORD+"@little-creek.kemju.mongodb.net/?retryWrites=true&w=majority"
 )
 .then(()=>{
     console.log("Connection Successful");
