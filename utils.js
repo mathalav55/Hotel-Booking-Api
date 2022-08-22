@@ -22,7 +22,7 @@ const sendSMS = function(phoneNumber,message){
     client.messages 
     .create({   
         body: message,  
-        messagingServiceSid: 'MG39d380938513eda8c24c33eff1645743',      
+        messagingServiceSid: '',      
         to: phoneNumber 
     }) 
     .then(message => console.log(message.sid)) 
