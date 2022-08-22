@@ -3,7 +3,7 @@ var router = express.Router();
 var booking = require('./bookingSchema');
 var checkDate = require('../utils');
 
-
+//create new booking
 router.post('/',(req,res)=>{
     //converting dates
     var checkInDate = new Date(req.body.checkInDate);

@@ -1,3 +1,4 @@
+
 var checkDate = function(inDate,outDate){
     var date = new Date();
     inDate = new Date(inDate);
@@ -17,10 +18,10 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;;
 const authToken = process.env.TWILIO_AUTH_TOKEN;; 
 const client = require('twilio')(accountSid, authToken); 
 
-var sendSMS = function(phoneNumber,message){
+const sendSMS = function(phoneNumber,message){
     client.messages 
     .create({   
-        body: 'Test',  
+        body: message,  
         messagingServiceSid: 'MG39d380938513eda8c24c33eff1645743',      
         to: phoneNumber 
     }) 
@@ -28,7 +29,7 @@ var sendSMS = function(phoneNumber,message){
     .done();
 };
 //whatsapp
-var sendWhatsApp = function(phoneNumber,message){
+const sendWhatsApp = function(phoneNumber,message){
     client.messages 
     .create({ 
         body: message, 
@@ -38,3 +39,4 @@ var sendWhatsApp = function(phoneNumber,message){
      .then(message => console.log(message.sid)) 
      .done();
 }
+
